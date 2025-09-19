@@ -5,6 +5,8 @@
  */
 package juego_parques;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Karen
@@ -17,6 +19,10 @@ public class Juego_Parques {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("hello guys ");
+        double Num1, Num2;
+        Scanner sc= new Scanner(System.in);
     }
     
 }
+ 
+
