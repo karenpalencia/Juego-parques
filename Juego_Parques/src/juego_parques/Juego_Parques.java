@@ -20,7 +20,13 @@ public class Juego_Parques {
         // TODO code application logic here
         System.out.println("hello guys ");
         double Num1, Num2;
+        
         Scanner sc= new Scanner(System.in);
+        System.out.println("ingrese dos numeros");
+        Num1=sc.nextDouble();
+        Num2=sc.nextDouble();
+        double re=Num1+Num2;
+        System.out.println("el resultado de la suma de los numeros es:"+Num1+" + "+Num2+"es de " +re);
     }
     
 }
