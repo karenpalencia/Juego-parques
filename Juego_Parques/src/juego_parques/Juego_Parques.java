@@ -27,8 +27,19 @@ public class Juego_Parques {
         Num2=sc.nextDouble();
         double re=Num1+Num2;
         System.out.println("el resultado de la suma de los numeros es:"+Num1+" + "+Num2+"es de " +re);
+        
+        Scanner va= new Scanner(System.in);
+        int num, a1,a2,a3;
+        do {System.out.print("ingrese la cantidad de numeros que quiere ver de la serie fibonacci");
+        num=va.nextInt();      
+         } while (num<1);
+        System.out.print("los primeros "+num+ "de la secuencia son");
+        
+
+    
     }
     
 }
  
+
 
