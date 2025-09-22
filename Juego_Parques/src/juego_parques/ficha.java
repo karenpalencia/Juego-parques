@@ -21,7 +21,7 @@ public class ficha {
     private int indicePasillo;
     private boolean haLlegadoAlaMeta;
     
-    public Ficha(String color){
+    public ficha(String color){
     this.color=color;
     this.enBase=true;
     this.enPasillo=false;
