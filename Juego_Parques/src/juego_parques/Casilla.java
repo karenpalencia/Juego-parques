@@ -24,7 +24,7 @@ public class Casilla {
         this.color = color;
     }
 
-    public Point getposicion() {
+    public Point getPosicion() {
         return posicion;
     }
 
