@@ -13,10 +13,11 @@ import java.util.ArrayList;
  * @author palen
  */
 public class Jugador {
-   private String nombre; 
-    private Color color; 
+
+    private String nombre;
+    private Color color;
     private String colorStr; // Guarda el nombre del color como String
-    private ArrayList<ficha> fichas;
+    private ArrayList<Ficha> fichas;
 
     public Jugador(String nombre, String colorStr) {
         this.nombre = nombre;
@@ -38,25 +39,36 @@ public class Jugador {
             default:
                 this.color = Color.BLACK;
         }
-        
+
         this.fichas = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
-            fichas.add(new ficha(colorStr));
+            fichas.add(new Ficha(colorStr));
         }
     }
 
-    public String getNombre() { return nombre; }
-    public Color getColor() { return color; } 
-    public String getColorStr() { return colorStr; } // Nuevo método
-    public ArrayList<ficha> getFichas() { return fichas; }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public String getColorStr() {
+        return colorStr;
+    } // Nuevo método
+
+    public ArrayList<Ficha> getFichas() {
+        return fichas;
+    }
 
     public boolean haGanado(int metaPasillo) {
-        for (ficha f : fichas) {
+        for (Ficha f : fichas) {
             if (!f.hasllegado(metaPasillo)) {
                 return false;
             }
         }
         return true;
     }
-    
+
 }

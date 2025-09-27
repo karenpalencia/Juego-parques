@@ -11,11 +11,13 @@ import java.util.Random;
  *
  * @author monto
  */
-public class dado {
-    private Random rnd=new Random();
-    public int[] lanzar(){
-    return new int[]{rnd.nextInt(6)+1,rnd.nextInt(6)+1};
-    
+public class Dado {
+
+    private Random rnd = new Random();
+
+    public int[] lanzar() {
+        return new int[]{rnd.nextInt(6) + 1, rnd.nextInt(6) + 1};
+
     }
-    
+
 }

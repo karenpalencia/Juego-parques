@@ -12,47 +12,70 @@ import java.awt.Point;
  *
  * @author monto
  */
-public class Casilla { 
+public class Casilla {
+
     private Point posicion;
     private String tipo;
     private String color;
-    
-    public Casilla(Point pos,String tipo,String color){
-       this.posicion=pos;
-       this.tipo=tipo;
-       this.color=color;
+
+    public Casilla(Point pos, String tipo, String color) {
+        this.posicion = pos;
+        this.tipo = tipo;
+        this.color = color;
     }
-    public Point getposicion(){
-    return posicion;}
-    public String getTipo(){return tipo;}
-    public String getColor (){return color;}
-    
-    
-    public void setTipo (String tipo){this.tipo=tipo;}
-    public void setColor (String color){this.color=color;}
-    
-    
-    public Color getDrawColor(){
-        if ("salida".equals(tipo)){return getColorJugador();
-        }else if ("seguro".equals(tipo)){
-                return new Color (0,200,200);
-        }else if ("trampa".equals(tipo)){return new Color (255,190,190);
-        
-        }else if ("pasillo".equals(tipo)) 
-        {
-            return getColorJugador ();
-        }else if ("meeta".equals(tipo)){
-            return new Color(120,230,230);
-        }else {return Color.WHITE;
+
+    public Point getposicion() {
+        return posicion;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Color getDrawColor() {
+        if ("salida".equals(tipo)) {
+            return getColorJugador();
+        } else if ("seguro".equals(tipo)) {
+            return new Color(0, 200, 200);
+        } else if ("trampa".equals(tipo)) {
+            return new Color(255, 190, 190);
+
+        } else if ("pasillo".equals(tipo)) {
+            return getColorJugador();
+        } else if ("meeta".equals(tipo)) {
+            return new Color(120, 230, 230);
+        } else {
+            return Color.WHITE;
         }
     }
-        private Color getColorJugador ()
-        {if (color ==null)return Color.LIGHT_GRAY;
-        switch (color) {case "Rojo":return new Color (255,80,80);
-        case "Azul":return new Color (80,80,255);
-        case "Verde":return new Color (80,200,80);
-        case "Amarillo":return new Color (255,220,80);
-        default: return Color.LIGHT_GRAY;
+
+    private Color getColorJugador() {
+        if (color == null) {
+            return Color.LIGHT_GRAY;
         }
+        switch (color) {
+            case "Rojo":
+                return new Color(255, 80, 80);
+            case "Azul":
+                return new Color(80, 80, 255);
+            case "Verde":
+                return new Color(80, 200, 80);
+            case "Amarillo":
+                return new Color(255, 220, 80);
+            default:
+                return Color.LIGHT_GRAY;
         }
+    }
 }
